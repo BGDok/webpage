@@ -1,0 +1,486 @@
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="title" content="BGDok.com - ЕООД">
+	<meta name="description" content="документния генератор може да предостави нужната документация за регистриране на фирма в търговския регистър на република България.">
+	<meta name="keywords" content="документ, генератор, еоод, комплект, търговски, закон, подаване, ионформация,">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="revisit-after" content="7 days">
+	<meta name="author" content="Eternal Resource Ltd.">
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e6a2cbf5-def8-4de9-b243-f8fdf2cae738" data-blockingmode="auto" type="text/javascript"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162166697-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-162166697-1');
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>BGDok.com - ЕООД</TITLE>
+		<!--JQuery validation-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+		<!--Boostrap & JQuery.slim-->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!--JQuery validation-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+		<!--Popper for tooltips-->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<!--bpotstrap-datepicker for datepicker styilng and functions-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+		<!--FontAwesome glyphicons for calendar icon-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!--Bootstrap-select dropdown styling and hopefully search-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.min.css">
+		<!--pdfmake-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
+		<!--<script src="js/form-validation.js"></script>-->
+		<script type="text/javascript" src="js/eood/docTemplate.js"></script>
+		<script type="text/javascript" src="js/eood/eoodHelper.js"></script>
+		<script type="text/javascript" src="js/helper.js"></script>
+		<style>
+			/* Modify the background color */
+			.bg-custom {
+				background-color: #193441;
+			}
+			.datepicker td, .datepicker th {
+				width: 1.5rem;
+				height: 1.5rem;
+				font-size: 0.85rem;
+			}
+		</style>
+		<style>
+			input:invalid {
+				border: 1px dashed red;
+			}
+
+			input:valid {
+				border: 1px solid black;
+			}
+			select:invalid {
+				border: 1px dashed red;
+			}
+
+			select:valid {
+				border: 1px solid black;
+
+			}
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+		<a class="navbar-brand" href="index.html" onclick="gtag('event', 'logo navigation', { 'event_category': 'logo navigation', 'event_label': 'user navigated using the logo'});">
+			<svg class="bi bi-bullseye" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+		<circle cx="8" cy="8" r="3.0"/>
+		</svg> <span>BGDok.com</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html" onclick="gtag('event', 'home navigation', { 'event_category': 'home navigation', 'event_label': 'user navigated to home menu'});">Начало</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="gtag('event', 'generator dropdown', { 'event_category': 'navigation', 'event_label': 'user expanded the generator drop down'});">Документи</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="covid.htm" data-toggle="tooltip" html="true" data-placement="right" title="Декларация за придвижване между градовете в България" onclick="gtag('event', 'declaration covid', { 'event_category': 'navigation', 'event_label': 'user selected the declaration for covid'});">COVID-19 Декларация</a>
+						<a class="dropdown-item" href="eood.htm" data-toggle="tooltip" html="true" data-placement="right" title="Комплект документи за регистрация на ЕООД" onclick="gtag('event', 'eood bundle', { 'event_category': 'navigation', 'event_label': 'user selected the eood bundle'});">ЕООД регистрация</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contacts.htm" onclick="gtag('event', 'contacts', { 'event_category': 'navigation', 'event_label': 'user navigated to contacts menu'});">Контакти</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</nav>
+		<div class="container-fluid">
+			<div class="card text-white bg-info my-2 text-center">
+				<div class="card-body">
+					<p class="text-white m-0 p-0 lead"><strong>Страницата не съхранява вашите данни! Oбработката им се случва на Вашето устройство.</strong></p>
+				</div>
+			</div>
+			<form id="EOOD" accept-charset=utf-8 role="form">
+				<div class="row py-3">
+					<div class="col-12">
+						<div class="text-center">
+							<h1>Комплект документи за регистрация на ЕООД в Търговския Регистър</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="mandatory" class="col-sm-12 col-md-6">
+						<div class="form-group date datepicker">
+							<label for="date_of_document">Дата на документа:</label>
+							<div class="input-group">
+								<input id="date_of_document" name="date_of_document" type="text" class="form-control">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<id class="fas fa-calendar-alt"></id>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="city_of_document">Град на събитието:</label>
+							<input id="city_of_document" name="city_of_document" type="text" class="form-control" data-live-search="true" data-required="required" placeholder="Въведете град">
+						</div>
+						<div id="personal">
+							<h4>Лични данни</h4>
+							<div class="form-group">
+								<label for="first_name" class="label">Име:</label>
+								<input id="first_name" name="first_name" type="text" class="form-control" placeholder="Въведете име" maxlength="64" pattern="[\u0410-\u044f\-\s]{1,64}" placeholder="Въведете име">
+							</div>
+							<div class="form-group">
+								<label for="middle_name" class="label">Презиме:</label>
+								<input id="middle_name" name="middle_name" type="text" class="form-control" placeholder="Въведете презиме" maxlength="64" pattern="[\u0410-\u044f\-\s]{1,64}" placeholder="Въведете презиме">
+							</div>
+							<div class="form-group">
+								<label for="last_name" class="label">Фамилия:</label>
+								<input id="last_name" name="last_name" type="text" class="form-control" placeholder="Въведете фамилия" maxlength="128" pattern="[\u0410-\u044f\-\s]{1,128}" placeholder="Въведете фамилия">
+							</div>
+							<div class="form-group">
+								<label for="pin_egn" class="label">ЕГН:</label>
+								<input id="pin_egn" name="pin_egn" type="text" class="form-control" placeholder="Въведете ЕГН" maxlength="10" pattern="[0-9]{10}" placeholder="Въведете единен граждански номер">
+							</div>
+							<div class="form-group">
+								<label for="user_id_number" class="label">Номер на лична карта:</label>
+								<input name="user_id_number" id="user_id_number" class="form-control" placeholder="Въведете номер на лична карта" maxlength="20" pattern="[0-9]{1,20}" placeholder="Въведете номер на лична карта">
+							</div>
+							<div class="form-group date datepicker">
+								<label for="card_issue_date">ЛК издадена на:</label>
+								<div class="input-group">
+									<input id="card_issue_date" name="card_issue_date" type="text" class="form-control">
+									<div class="input-group-append">
+										<span class="input-group-text">
+											<id class="fas fa-calendar-alt"></id>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group date datepicker">
+								<label for="card_valid_date">ЛК валидна до:</label>
+								<div class="input-group">
+									<input id="card_valid_date" name="card_valid_date" type="text" class="form-control">
+									<div class="input-group-append">
+										<span class="input-group-text">
+											<id class="fas fa-calendar-alt"></id>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="card_issuer_city">ЛК издадена от МВР (град):</label>
+								<select id="card_issuer_city" name="card_issuer_city" type="text" class="form-control">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div id="addresses" class="col-sm-12 col-md-6">
+						<div id="id_address">
+							<h4>Адрес по Лична карта</h4>
+							<div class="form-group">
+								<label for="user_address_city">Град:</label>
+								<input id="user_address_city" name="user_address_city" type="text" class="form-control" data-live-search="true" data-required="required" placeholder="Въведете град">
+							</div>
+							<div class="form-group">
+								<label for="user_address_province">Област:</label>
+								<select id="user_address_province" name="user_address_province" class="form-control" data-live-search="true" data-required="required">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="user_address_municipality" class="label">Община :</label>
+								<input id="user_address_municipality" name="user_address_municipality" type="text" class="form-control" placeholder="Въведете община">
+							</div>
+							<div class="form-group">
+								<label for="user_address_pk" class="label">Пощенски код:</label>
+								<input id="user_address_pk" name="user_address_pk" type="text" class="form-control" maxlength="4" pattern="[0-9]{4}" placeholder="Въведете пощенски код">
+							</div>
+							<div class="form-group">
+								<label for="user_address_neighborhood" class="label">Ж.К. :</label>
+								<input id="user_address_neighborhood" name="user_address_neighborhood" type="text" class="form-control" placeholder="Ж.К. или Квартал">
+							</div>
+							<div class="form-group">
+								<label for="user_address_street" class="label">Улица:</label>
+								<input id="user_address_street" name="user_address_street" type="text" class="form-control" placeholder="Въведете име на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="user_address_street_number" class="label">Номер на улица:</label>
+								<input id="user_address_street_number" name="user_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="user_address_block" class="label">Блок:</label>
+								<input id="user_address_block" name="user_address_block" type="text" class="form-control" placeholder="Въведете блок">
+							</div>
+							<div class="form-group">
+								<label for="user_address_entry" class="label">Вход:</label>
+								<input name="user_address_entry" id="user_address_entry" type="text" class="form-control" placeholder="Въведете вход">
+							</div>
+							<div class="form-group">
+								<label for="user_address_floor" class="label">Етаж:</label>
+								<input id="user_address_floor" name="user_address_floor" type="text" class="form-control" placeholder="Въведете етаж">
+							</div>
+							<div class="form-group">
+								<label for="user_address_apartment" class="label">Апартамент:</label>
+								<input id="user_address_apartment" name="user_address_apartment" type="text" class="form-control" placeholder="Въведете апартамент">
+							</div>
+						</div>
+					</div>
+					<div id="company_data_group" class="col-sm-12 col-md-6">
+						<h4>Адрес на фирмата</h4>
+						<div class="form-group">
+							<label for="company_address_city">Град:</label>
+							<input id="company_address_city" name="company_address_city" type="text" class="form-control" placeholder="Въведете град">
+						</div>
+						<div class="form-group">
+							<label for="company_address_province">Област:</label>
+							<select id="company_address_province" name="company_address_province" class="form-control">
+								<option label="--Изберете град--" selected></option>
+								<option>Благоевград</option>
+								<option>Бургас</option>
+								<option>Варна</option>
+								<option>Велико Търново</option>
+								<option>Видин</option>
+								<option>Враца</option>
+								<option>Габрово</option>
+								<option>Добрич</option>
+								<option>Кърджали</option>
+								<option>Кюстендил</option>
+								<option>Ловеч</option>
+								<option>Монтана</option>
+								<option>Пазарджик</option>
+								<option>Перник</option>
+								<option>Плевен</option>
+								<option>Пловдив</option>
+								<option>Разград</option>
+								<option>Русе</option>
+								<option>Силистра</option>
+								<option>Сливен</option>
+								<option>Смолян</option>
+								<option>София</option>
+								<option>София (столица)</option>
+								<option>Стара Загора</option>
+								<option>Търговище</option>
+								<option>Хасково</option>
+								<option>Шумен</option>
+								<option>Ямбол</option>
+							</select>
+						</div>
+						<div class="form-group">
+								<label for="company_address_municipality" class="label">Община :</label>
+								<input id="company_address_municipality" name="company_address_municipality" type="text" class="form-control" placeholder="Въведете община">
+							</div>
+						<div class="form-group">
+							<label for="company_address_pk" class="label">Пощенски код:</label>
+							<input id="company_address_pk" name="company_address_pk" class="form-control" maxlength="4" pattern="[0-9]{4}" placeholder="Въведете пощенски код">
+						</div>
+						<div class="form-group">
+							<label for="company_address_neighborhood" class="label">Ж.К. :</label>
+							<input id="company_address_neighborhood" name="company_address_neighborhood" type="text" class="form-control" placeholder="Въведете Ж.К. или квартал">
+						</div>
+						<div class="form-group">
+							<label for="company_address_street" class="label">Улица:</label>
+							<input id="company_address_street" name="company_address_street" type="text" class="form-control" placeholder="Въведете улица">
+						</div>
+						<div class="form-group">
+							<label for="company_address_street_number" class="label">Номер на улица:</label>
+							<input id="company_address_street_number" name="company_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+						</div>
+						<div class="form-group">
+							<label for="company_address_block" class="label">Блок:</label>
+							<input id="company_address_block" name="company_address_block" type="text" class="form-control" placeholder="Въведете блок">
+						</div>
+						<div class="form-group">
+							<label for="company_address_entry" class="label">Вход:</label>
+							<input name="company_address_entry" id="company_address_entry" type="text" class="form-control" placeholder="Въведете вход">
+						</div>
+						<div class="form-group">
+							<label for="company_address_floor" class="label">Етаж:</label>
+							<input id="company_address_floor" name="company_address_floor" type="text" class="form-control" placeholder="Въведете етаж">
+						</div>
+					</div>
+					<div id="company_data_group" class="col-sm-12 col-md-6">
+						<h4>Данни за фирмата</h4>
+						<div class="form-group">
+							<label for="company_name" class="label">Име на компанията:</label>
+							<input id="company_name" name="company_name" type="text" class="form-control" maxLength="180" placeholder="Въведете име на фирмата">
+						</div>
+						<div class="form-group">
+							<label for="company_name_latin" class="label">Име на компанията на латиница:</label>
+							<input id="company_name_latin" name="company_name_latin" type="text" class="form-control" maxLength="180" placeholder="Въведете име на фирмата на латински">
+						</div>
+						<div class="form-group">
+							<label for="company_purpose" class="label">Предмет на дейност:</label>
+							<input id="company_purpose" name="company_purpose" type="text" class="form-control" maxLength="180" placeholder="Въведете с какво се занимава фирмата">
+						</div>
+						<div class="form-group">
+							<label for="company_capital" class="label">Стартов капитал на фирмата (цифри):</label>
+							<input id="company_capital" name="company_capital" type="text" class="form-control" maxLength="9" placeholder="Въведете началния капитал" oninput="translateNum2Txt('#company_capital', '#company_capital_text'); capitalCalculate('#company_capital','#company_capital_banked','#company_capital_banked_percentage','#company_share_count','#company_share_cost', '#company_share_banked'); translateNum2Txt('#company_share_cost', '#company_share_cost_text'); translateNum2Txt('#company_capital_banked_percentage', '#company_capital_banked_percentage_text'); translateNum2Txt('#company_share_banked', '#company_share_banked_text')" pattern="[0-9]*">
+						</div>
+						<div class="form-group">
+							<label for="company_capital_text" class="label" hidden>Стартов капитал на фирмата (текст):</label>
+							<input id="company_capital_text" name="company_capital_text" type="text" class="form-control" maxLength="180" placeholder="Въведете началния капитал" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_capital_banked" class="label">Внесен капитал (цифри):</label>
+							<input id="company_capital_banked" name="company_capital_banked" type="text" class="form-control" maxLength="180" placeholder="Въведете внесен капитал" oninput="translateNum2Txt('#company_capital_banked', '#company_capital_banked_text'); capitalCalculate('#company_capital','#company_capital_banked','#company_capital_banked_percentage','#company_share_count','#company_share_cost', '#company_share_banked'); translateNum2Txt('#company_share_cost', '#company_share_cost_text'); translateNum2Txt('#company_capital_banked_percentage', '#company_capital_banked_percentage_text'); translateNum2Txt('#company_share_banked', '#company_share_banked_text')" pattern="[0-9]*">
+						</div>
+						<div class="form-group">
+							<label for="company_capital_banked_text" class="label" hidden>Внесен капитал (текст):</label>
+							<input id="company_capital_banked_text" name="company_capital_banked_text" type="text" class="form-control" maxLength="180" placeholder="Въведете внесен капитал" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_capital_banked_percentage" class="label" hidden>Внесен капитал (процент - цяло число):</label>
+							<input id="company_capital_banked_percentage" name="company_capital_banked_percentage" type="text" class="form-control" maxLength="180" placeholder="Въведете процент внесен капитал" pattern="[0-9]*" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_capital_banked_percentage_text" class="label" hidden>Внесен капитал (процент - цяло число текст):</label>
+							<input id="company_capital_banked_percentage_text" name="company_capital_banked_percentage_text" type="text" class="form-control" maxLength="180" placeholder="Въведете процент внесен капитал" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_share_count" class="label">Брой дялове:</label>
+							<input id="company_share_count" name="company_share_count" type="text" class="form-control" maxLength="180" placeholder="Въведете с колко дяла почва фирмата" oninput="translateNum2Txt('#company_share_count', '#company_share_count_text'); capitalCalculate('#company_capital','#company_capital_banked','#company_capital_banked_percentage','#company_share_count','#company_share_cost', '#company_share_banked'); translateNum2Txt('#company_share_cost', '#company_share_cost_text'); translateNum2Txt('#company_capital_banked_percentage', '#company_capital_banked_percentage_text'); translateNum2Txt('#company_share_banked', '#company_share_banked_text'); translateNum2Txt('#company_share_banked', '#company_share_banked_text')" pattern="[0-9]*">
+						</div>
+						<div class="form-group">
+							<label for="company_share_count_text" class="label" hidden>Брой дялове (текст):</label>
+							<input id="company_share_count_text" name="company_share_count_text" type="text" class="form-control" maxLength="180" placeholder="Въведете с колко дяла почва фирмата" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_share_cost" class="label" hidden>Цена на дял (цифри):</label>
+							<input id="company_share_cost" name="company_share_cost" type="text" class="form-control" maxLength="180" placeholder="Въведете с колко дяла почва фирмата" pattern="[0-9]*" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_share_cost_text" class="label" hidden>Цена на дял (текст):</label>
+							<input id="company_share_cost_text" name="company_share_cost_text" type="text" class="form-control" maxLength="180" placeholder="Въведете с колко дяла почва фирмата" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_share_banked" class="label" hidden>Брой внесен дял (цифри):</label>
+							<input id="company_share_banked" name="company_share_banked" type="text" class="form-control" maxLength="180" placeholder="Въведете колко дяла са внесени" pattern="[0-9]*" hidden>
+						</div>
+						<div class="form-group">
+							<label for="company_share_banked_text" class="label" hidden>Брой внесен дял (текст):</label>
+							<input id="company_share_banked_text" name="company_share_banked_text" type="text" class="form-control" maxLength="180" placeholder="Въведете колко дяла са внесени" pattern="[0-9]*" hidden>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 px-5">
+					<div class="row ">
+						<div class="col-12 pb-1">
+							<a href="javascript:getAllEood('#EOOD')" class="btn text-center btn-lg btn-dark btn-block" onclick="gtag('event', 'eood all', { 'event_category': 'generate pdf eood all', 'event_label': 'generate all files based on the form input'});"><i class="fas fa-file-download"></i> Изтегли всички документи</a>
+						</div>
+					</div>
+					<div class="row" id="single-documents">
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getProtocolDoc('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood protocol', { 'event_category': 'generate pdf eood protocol', 'event_label': 'generate protocol file based on the form input'});"><i class="fas fa-file-download"></i> Протокол</a>
+						</div>				
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getFoundingActDoc('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood founding act', { 'event_category': 'generate pdf eood founding act', 'event_label': 'generate founding act file based on the form input'});"><i class="fas fa-file-download"></i> Учредителен акт</a>
+						</div>
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getSample141('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood sample141', { 'event_category': 'generate pdf eood sample141', 'event_label': 'generate sample141 file based on the form input'});"><i class="fas fa-file-download"></i> Образец 141</a>
+						</div>
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getDeclaration13('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood declaration13', { 'event_category': 'generate pdf eood declaration13', 'event_label': 'generate declaration13 file based on the form input'});"><i class="fas fa-file-download"></i> Декларация 13</a>
+						</div>
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getDeclaration141('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood declaration141', { 'event_category': 'generate pdf eood declaration141', 'event_label': 'generate declaration141 file based on the form input'});"><i class="fas fa-file-download"></i> Декларация 141</a>
+						</div>
+						<div class="col-sm-6 col-md-4 pb-1">
+							<a href="javascript:getDeclaration142('#EOOD')" class="btn btn-outline-dark btn-block" onclick="gtag('event', 'eood declaration142', { 'event_category': 'generate pdf eood declaration142', 'event_label': 'generate declaration142 file based on the form input'});"><i class="fas fa-file-download"></i> Декларация 142</a>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+		<footer class="py-5 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">Тази страница е възможна благодарение на идеята и съдействието на Вечен Ресурс ЕООД</p>
+				<p class="m-0 text-center text-white">Copyright &copy;2020 Eternal Resource Ltd.</p>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			$('.datepicker').datepicker({
+				weekStart: 1,
+				autoclose: true,
+				todayHighlight: true,
+				format: 'dd/mm/yyyy',
+				daysOfWeekHighlighted: '0,6'
+
+			});
+			$('.datepicker').datepicker("setDate", new Date());
+		</script>
+		<div id="cookie declaration" hidden><script id="CookieDeclaration" src="https://consent.cookiebot.com/e6a2cbf5-def8-4de9-b243-f8fdf2cae738/cd.js" type="text/javascript" async></script></div>
+	</body>
+	</html>
+<!-- oninput="capitalCalculate('#company_capital','#company_capital_banked','#company_capital_banked_percentage','#company_share_count','#company_share_cost')"  -->

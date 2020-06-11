@@ -1,0 +1,541 @@
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="title" content="BGDok.com - COVID-19">
+	<meta name="description" content="документния генератор може да предостави нужната декларация за придвижване между градовете в България, предвид кризисна ситуация свързана с вируса COVID-19 в PDF формат.">
+	<meta name="keywords" content="документ, генератор, декларация, МВР, изискване, ковид, корона, вирус, covid, covid-19, corona, virus, declaration, България, пътуване, градове,">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="revisit-after" content="7 days">
+	<meta name="author" content="Eternal Resource Ltd.">
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e6a2cbf5-def8-4de9-b243-f8fdf2cae738" data-blockingmode="auto" type="text/javascript"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162166697-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-162166697-1');
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<TITLE>BGDok.com - COVID-19</TITLE>
+		<!--JQuery validation-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+		<!--Boostrap & JQuery.slim-->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+		<!--Popper for tooltips-->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+		<!--bpotstrap-datepicker for datepicker styilng and functions-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+
+		<!--FontAwesome glyphicons for calendar icon-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+		<!--Bootstrap-select dropdown styling and hopefully search-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.min.css">
+
+		<!--pdfmake-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
+		<!--buttons-->
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		<!--<script src="js/form-validation.js"></script>-->
+		<script type="text/javascript" src="js/covid.js"></script>
+		<script type="text/javascript" src="js/helper.js"></script>
+
+		<style>
+			/* Modify the background color */
+			.bg-custom {
+				background-color: #193441;
+			}
+			.datepicker td, .datepicker th {
+				width: 1.5rem;
+				height: 1.5rem;
+				font-size: 0.85rem;
+			}
+		</style>
+
+		<style>
+			input:invalid {
+				border: 1px dashed red;
+			}
+
+			input:valid {
+				border: 1px solid black;
+			}
+			select:invalid {
+				border: 1px dashed red;
+			}
+
+			select:valid {
+				border: 1px solid black;
+
+			}
+		</style>
+
+
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<div class="container">
+				<a class="navbar-brand" href="index.html" onclick="gtag('event', 'logo navigation', { 'event_category': 'logo navigation', 'event_label': 'user navigated using the logo'});">
+					<svg class="bi bi-bullseye" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+						<circle cx="8" cy="8" r="3.0"/>
+					</svg> <span>BGDok.com</span>
+
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+
+
+						<li class="nav-item">
+							<a class="nav-link" href="index.html" onclick="gtag('event', 'home navigation', { 'event_category': 'home navigation', 'event_label': 'user navigated to home menu'});">Начало</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="gtag('event', 'generator dropdown', { 'event_category': 'navigation', 'event_label': 'user expanded the generator drop down'});">Документи</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="covid.htm" data-toggle="tooltip" html="true" data-placement="right" title="Декларация за придвижване между градовете в България" onclick="gtag('event', 'declaration covid', { 'event_category': 'navigation', 'event_label': 'user selected the declaration for covid'});">COVID-19 Декларация</a>
+								<a class="dropdown-item" href="eood.htm" data-toggle="tooltip" html="true" data-placement="right" title="Комплект документи за регистрация на ЕООД" onclick="gtag('event', 'eood bundle', { 'event_category': 'navigation', 'event_label': 'user selected the eood bundle'});">ЕООД регистрация</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contacts.htm" onclick="gtag('event', 'contacts', { 'event_category': 'navigation', 'event_label': 'user navigated to contacts menu'});">Контакти</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="card text-white bg-info my-2 text-center">
+				<div class="card-body">
+					<p class="text-white m-0 p-0 lead"><strong>Страницата не съхранява вашите данни! Oбработката им се случва на Вашето устройство.</strong></p>
+				</div>
+			</div>
+			<form id="COVID-19" accept-charset=utf-8 role="form">
+				<div class="row py-3">
+					<div class="col-12">
+						<div class="text-center">
+							<h1>COVID-19 Декларация от работодател - МВР Официален</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="mandatory" class="col-sm-12 col-md-6">
+						<div id="circumstances">
+							<h4>Обстоятелства</h4>
+							<label for="reason_for_leave" class="label">Какво налага придвижването</label>
+							<div class="form-group">
+								<select id="reason_for_leave" name="reason_for_leave" class="form-control" required="required" onchange="toggleCompany()">
+									<option selected></option>
+									<option value="Здравословни причини на пътуващия или негови близки." onclick="gtag('event', 'reason', { 'event_category': 'health', 'event_label': 'user selected health reason'});">Здраве</option>
+									<option value="Полагане на труд." onclick="gtag('event', 'reason', { 'event_category': 'work', 'event_label': 'user selected work reason'});">Работа</option>
+									<option value="Завръщане на настоящия или постоянен адрес." onclick="gtag('event', 'reason', { 'event_category': 'travel', 'event_label': 'user selected travel reason'});">Прибиране</option>
+									<option value="Други неотложни причини." onclick="gtag('event', 'reason', { event_category': 'other', 'event_label': 'user selected other reason'});">Друго</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="reason_for_leave_text" class="label">Уточнение:</label>
+								<textarea id="reason_for_leave_text" name="reason_for_leave_text" rows="2" class="form-control" maxlength="150" placeholder="Кратка причина в свободен текст"></textarea>
+							</div>
+						</div>
+						<div id="personal">
+							<h4>Лични данни</h4>
+							<div class="form-group">
+								<label for="first_name" class="label">Име:</label>
+								<input id="first_name" name="first_name" type="text" class="form-control" placeholder="Въведете име" maxlength="64" pattern="[\u0410-\u044f\-\s]{1,64}" placeholder="Въведете име">
+							</div>
+							<div class="form-group">
+								<label for="middlele_name" class="label">Презиме:</label>
+								<input id="middle_name" name="middle_name" type="text" class="form-control" placeholder="Въведете презиме" maxlength="64" pattern="[\u0410-\u044f\-\s]{1,64}" placeholder="Въведете презиме">
+							</div>
+							<div class="form-group">
+								<label for="last_name" class="label">Фамилия:</label>
+								<input id="last_name" name="last_name" type="text" class="form-control" placeholder="Въведете фамилия" maxlength="128" pattern="[\u0410-\u044f\-\s]{1,128}" placeholder="Въведете фамилия">
+							</div>
+							<div class="form-group">
+								<label for="pin_egn" class="label">ЕГН:</label>
+								<input id="pin_egn" name="pin_egn" type="text" class="form-control" placeholder="Въведете ЕГН" maxlength="10" pattern="[0-9]{10}" placeholder="Въведете единен граждански номер">
+							</div>
+							<div class="form-group">
+								<label for="user_id_number" class="label">Номер на лична карта:</label>
+								<input name="user_id_number" id="user_id_number" class="form-control" placeholder="Въведете номер на лична карта" maxlength="20" pattern="[0-9]{1,20}" placeholder="Въведете номер на лична карта">
+							</div>
+							<div class="form-group date datepicker">
+								<label for="card_issue_date">ЛК издадена на:</label>
+								<div class="input-group">
+									<input id="card_issue_date" name="card_issue_date" type="text" class="form-control">
+									<div class="input-group-append">
+										<span class="input-group-text">
+											<id class="fas fa-calendar-alt"></id>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="card_issuer_city">ЛК издадена от МВР (град):</label>
+								<select id="card_issuer_city" name="card_issuer_city" type="text" class="form-control">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+								</select>
+							</div>
+						</div>
+						<div id="company_data_group" hidden>
+							<h4>Данни за фирмата</h4>
+							<div class="form-group">
+								<label for="company_tag_name" class="label">Име на компанията:</label>
+								<input id="company_tag_name" name="company_tag_name" type="text" class="form-control" maxLength="180" placeholder="Въведете име на фирмата">
+							</div>
+							<div class="form-group">
+								<label for="company_address_city">Град:</label>
+								<input id="company_address_city" name="company_address_city" type="text" class="form-control" data-live-search="true" data-required="required" placeholder="Въведете град">
+							</div>
+							<div class="form-group">
+								<label for="company_address_municipality">Област:</label>
+								<select id="company_address_municipality" name="company_address_municipality" class="form-control" data-live-search="true" data-required="required">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="company_address_street" class="label">Улица:</label>
+								<input id="company_address_street" name="company_address_street" type="text" class="form-control" placeholder="Въведете улица">
+							</div>
+							<div class="form-group">
+								<label for="company_address_street_number" class="label">Номер на улица:</label>
+								<input id="company_address_street_number" name="company_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+							</div>
+						</div>
+					</div>
+
+					<div id="addresses" class="col-sm-12 col-md-6">
+						<div id="id_address">
+							<h4>Адрес по Лична карта</h4>
+							<div class="form-group">
+								<label for="user_address_city">Град:</label>
+								<input id="user_address_city" name="user_address_city" type="text" class="form-control" data-live-search="true" data-required="required" placeholder="Въведете град">
+							</div>
+							<div class="form-group">
+								<label for="user_address_municipality">Община:</label>
+								<select id="user_address_municipality" name="user_address_municipality" class="form-control" data-live-search="true" data-required="required">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="user_address_pk" class="label">Пощенски код:</label>
+								<input id="user_address_pk" name="user_address_pk" type="text" class="form-control" maxlength="4" pattern="[0-9]{4}" placeholder="Въведете пощенски код">
+							</div>
+							<div class="form-group">
+								<label for="user_address_neighborhood" class="label">Ж.К. :</label>
+								<input id="user_address_neighborhood" name="user_address_neighborhood" type="text" class="form-control" placeholder="Ж.К. или Квартал">
+							</div>
+							<div class="form-group">
+								<label for="user_address_street" class="label">Улица:</label>
+								<input id="user_address_street" name="user_address_street" type="text" class="form-control" placeholder="Въведете име на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="user_address_street_number" class="label">Номер на улица:</label>
+								<input id="user_address_street_number" name="user_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="user_address_block" class="label">Блок:</label>
+								<input id="user_address_block" name="user_address_block" type="text" class="form-control" placeholder="Въведете блок">
+							</div>
+							<div class="form-group">
+								<label for="user_address_entry" class="label">Вход:</label>
+								<input name="user_address_entry" id="user_address_entry" type="text" class="form-control" placeholder="Въведете вход">
+							</div>
+							<div class="form-group">
+								<label for="user_address_floor" class="label">Етаж:</label>
+								<input id="user_address_floor" name="user_address_floor" type="text" class="form-control" placeholder="Въведете етаж">
+							</div>
+							<div class="form-group">
+								<label for="user_address_apartment" class="label">Апартамент:</label>
+								<input id="user_address_apartment" name="user_address_apartment" type="text" class="form-control" placeholder="Въведете апартамент">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>
+								<h4>Настоящият ми адрес е различен от този по ЛК</h4>
+								<input type="checkbox" class="btn-block" name="has_current_address" id="has_current_address" data-toggle="toggle" data-on="Да" data-off="Не" data-onstyle="success" data-offstyle="dark" onchange="toggleCurrentAddress()" onclick="gtag('event', 'address', { 'event_category': 'current address', 'event_label': 'user selects that there is a current address'});">
+							</label>
+						</div>
+						<div id="current_address" hidden>
+							<h4>Настоящ адрес</h4>
+							<div class="form-group">
+								<label for="current_user_address_city">Град:</label>
+								<input id="current_user_address_city" name="current_user_address_city" type="text" class="form-control" placeholder="Въведете град">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_municipality">Община:</label>
+								<select id="current_user_address_municipality" name="current_user_address_municipality" class="form-control">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_pk" class="label">Пощенски код:</label>
+								<input id="current_user_address_pk" name="current_user_address_pk" class="form-control" maxlength="4" pattern="[0-9]{4}" placeholder="Въведете пощенски код">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_neighborhood" class="label">Ж.К. :</label>
+								<input id="current_user_address_neighborhood" name="current_user_address_neighborhood" type="text" class="form-control" placeholder="Въведете Ж.К. или квартал">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_street" class="label">Улица:</label>
+								<input id="current_user_address_street" name="current_user_address_street" type="text" class="form-control" placeholder="Въведете улица">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_street_number" class="label">Номер на улица:</label>
+								<input id="current_user_address_street_number" name="current_user_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_block" class="label">Блок:</label>
+								<input id="current_user_address_block" name="current_user_address_block" type="text" class="form-control" placeholder="Въведете блок">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_entry" class="label">Вход:</label>
+								<input name="current_user_address_entry" id="current_user_address_entry" type="text" class="form-control" placeholder="Въведете вход">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_floor" class="label">Етаж:</label>
+								<input id="current_user_address_floor" name="current_user_address_floor" type="text" class="form-control" placeholder="Въведете етаж">
+							</div>
+							<div class="form-group">
+								<label for="current_user_address_apartment" class="label">Апартамент:</label>
+								<input id="current_user_address_apartment" name="current_user_address_apartment" type="text" class="form-control" placeholder="Въведете апартамент">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>
+								<h4>Живея на различен адрес</h4>
+								<input type="checkbox" class="btn-block" name="has_other_address" id="has_other_address" data-toggle="toggle" data-on="Да" data-off="Не" data-onstyle="success" data-offstyle="dark" onchange="toggleOtherAddress()" onclick="gtag('event', 'address', { 'event_category': 'other address', 'event_label': 'user selects that there is other address'});">
+							</label>
+						</div>
+						<div id="other_address" hidden>
+							<h4>Допълниетелен адрес</h4>
+							<div class="form-group">
+								<label for="other_user_address_city">Град:</label>
+								<input id="other_user_address_city" name="other_user_address_city" type="text" class="form-control" data-live-search="true" data-required="required" placeholder="Въведете град">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_municipality">Община:</label>
+								<select id="other_user_address_municipality" name="other_user_address_municipality" class="form-control" data-live-search="true" data-required="required">
+									<option label="--Изберете град--" selected></option>
+									<option>Благоевград</option>
+									<option>Бургас</option>
+									<option>Варна</option>
+									<option>Велико Търново</option>
+									<option>Видин</option>
+									<option>Враца</option>
+									<option>Габрово</option>
+									<option>Добрич</option>
+									<option>Кърджали</option>
+									<option>Кюстендил</option>
+									<option>Ловеч</option>
+									<option>Монтана</option>
+									<option>Пазарджик</option>
+									<option>Перник</option>
+									<option>Плевен</option>
+									<option>Пловдив</option>
+									<option>Разград</option>
+									<option>Русе</option>
+									<option>Силистра</option>
+									<option>Сливен</option>
+									<option>Смолян</option>
+									<option>София</option>
+									<option>София (столица)</option>
+									<option>Стара Загора</option>
+									<option>Търговище</option>
+									<option>Хасково</option>
+									<option>Шумен</option>
+									<option>Ямбол</option>
+
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_pk" class="label">Пощенски код:</label>
+								<input id="other_user_address_pk" name="other_user_address_pk" type="text" class="form-control" maxlength="4" pattern="[0-9]{4}" placeholder="Въведете пощенски код">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_neighborhood" class="label">Ж.К. :</label>
+								<input id="other_user_address_neighborhood" name="other_user_address_neighborhood" type="text" class="form-control" placeholder="Ж.К. или Квартал">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_street" class="label">Улица:</label>
+								<input id="other_user_address_street" name="other_user_address_street" type="text" class="form-control" placeholder="Въведете име на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_street_number" class="label">Номер на улица:</label>
+								<input id="other_user_address_street_number" name="other_user_address_street_number" type="text" class="form-control" placeholder="Въведете номер на ул./бул.">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_block" class="label">Блок:</label>
+								<input id="other_user_address_block" name="other_user_address_block" type="text" class="form-control" placeholder="Въведете блок">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_entry" class="label">Вход:</label>
+								<input name="other_user_address_entry" id="other_user_address_entry" type="text" class="form-control" placeholder="Въведете вход">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_floor" class="label">Етаж:</label>
+								<input id="other_user_address_floor" name="other_user_address_floor" type="text" class="form-control" placeholder="Въведете етаж">
+							</div>
+							<div class="form-group">
+								<label for="other_user_address_apartment" class="label">Апартамент:</label>
+								<input id="other_user_address_apartment" name="other_user_address_apartment" type="text" class="form-control" placeholder="Въведете апартамент">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 px-5">
+						<a href="javascript:getCovidDoc('#COVID-19')" class="btn btn-lg btn-dark btn-block" onclick="gtag('event', 'covid', { 'event_category': 'generate pdf covid', 'event_label': 'generate pdf file based on the form input'});">Генерирай</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<footer class="py-5 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">Тази страница е възможна благодарение на идеята и съдействието на Вечен Ресурс ЕООД</p>
+				<p class="m-0 text-center text-white">Copyright &copy;2020 Eternal Resource Ltd.</p>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			$('.datepicker').datepicker({
+				weekStart: 1,
+				autoclose: true,
+				todayHighlight: true,
+				format: 'dd/mm/yyyy',
+				daysOfWeekHighlighted: '0,6'
+
+			});
+			$('.datepicker').datepicker("setDate", new Date());
+		</script>
+		<div id="cookie declaration" hidden><script id="CookieDeclaration" src="https://consent.cookiebot.com/e6a2cbf5-def8-4de9-b243-f8fdf2cae738/cd.js" type="text/javascript" async></script></div>
+	</body>
+	</html>
